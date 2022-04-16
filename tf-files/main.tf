@@ -30,7 +30,7 @@ resource "aws_launch_template" "asg-lt" {
   tag_specifications {
     resource_type = "instance"
     tags = {
-      Name = "Web Server of Phonebook App"
+      Name = var.instance_name
     }
   }
 }
@@ -87,7 +87,7 @@ resource "aws_autoscaling_group" "app-asg" {
 
 resource "aws_db_instance" "db-server" {
   instance_class              = var.db_instance_class
-  allocated_storage           = 20
+  allocated_storage           = 20 # GB
   vpc_security_group_ids      = [aws_security_group.db-sg.id]
   allow_major_version_upgrade = false
   auto_minor_version_upgrade  = true
@@ -109,6 +109,6 @@ resource "github_repository_file" "dbendpoint" {
   content             = aws_db_instance.db-server.address
   file                = "dbserver.endpoint"
   repository          = var.github_repository_name
-  overwrite_on_create = true
   branch              = var.github_repository_branch_name
+  overwrite_on_create = true
 }
