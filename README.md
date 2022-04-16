@@ -190,7 +190,13 @@ tf-phonebook-web-application (folder)
 aws ec2 describe-subnets --no-paginate --filters "Name=default-for-az,Values=true" | egrep "(VpcId)|(SubnetId)"
 ```
 
-## Resources
+## Terraform Logs
+
+- Creating project resources in AWS using Terraform may take 10-20 minutes.
+
+![Terraform Logs](./tf_logs.png)
+
+## Documentation Resources
 
 - [Python Flask Framework](https://flask.palletsprojects.com/en/1.1.x/quickstart/)
 
