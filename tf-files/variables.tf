@@ -25,9 +25,9 @@ variable "profile" {
   default = "default"
 }
 
-#####################################
+#######################################
 # Required AWS Resources Configuration
-#####################################
+#######################################
 
 variable "key_name" {
   default = "east1"
