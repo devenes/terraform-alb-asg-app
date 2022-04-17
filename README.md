@@ -110,19 +110,11 @@ thousand                         Warning -> 'Invalid input: Phone number should 
 
 - Phonebook Application Website URL should be given as output by Terraform, after the resources created.
 
-## Project Skeleton
+## Terraform
 
-```text
-tf-phonebook-web-application (folder)
-|
-|----readme.md                 (Definition of the project)
-|----main.tf                   (Terraform Configuration)
-|----phonebook-app.py          (Python Flask Web Application)
-|----templates
-        |----index.html        (HTML template)
-        |----add-update.html   (HTML template)
-        |----delete.html       (HTML template)
-```
+- Creating and deploying project resources on AWS using Terraform may take 10 minutes approximately.
+
+![Terraform Logs](./tf_logs.png)
 
 ## Expected Outcome
 
@@ -189,12 +181,6 @@ tf-phonebook-web-application (folder)
 ```bash
 aws ec2 describe-subnets --no-paginate --filters "Name=default-for-az,Values=true" | egrep "(VpcId)|(SubnetId)"
 ```
-
-## Terraform Logs
-
-- Creating project resources in AWS using Terraform may take 10-20 minutes.
-
-![Terraform Logs](./tf_logs.png)
 
 ## Documentation Resources
 
