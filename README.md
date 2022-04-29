@@ -6,7 +6,7 @@ The Phonebook Application aims to create a phonebook application in Python and d
 
 ## Project Architecture
 
-![Project](tf-phonebook.png)
+![Project](./readme/tf-phonebook.png)
 
 - Your company has recently started a project that aims to serve as phonebook web application. You and your colleagues have started to work on the project. Your teammates have developed the UI part the project as shown in the template folder and develop the coding part and they need your help to deploying the app in development environment.
 
@@ -66,7 +66,7 @@ thousand                         Warning -> 'Invalid input: Phone number should 
 
 - Lastly, after transforming your code into web application, you are requested to push your program to the project repository on the Github and deploy your solution in the development environment on AWS Cloud using Terraform to showcase your project. In the development environment, you can configure your Terraform file using the followings,
 
-![Project](Security-Groups.png)
+![Project](./readme/Security-Groups.png)
 
 - The application should be created with new AWS resources.
 
@@ -114,11 +114,11 @@ thousand                         Warning -> 'Invalid input: Phone number should 
 
 - Creating and deploying project resources on AWS using Terraform may take 10 minutes approximately.
 
-![Terraform Logs](./tf_logs.png)
+![Terraform Logs](./readme/tf_logs.png)
 
 ## Expected Outcome
 
-![Phonebook App Search Page](./search-snapshot.png)
+![Phonebook App Search Page](./readme/search-snapshot.png)
 
 ### At the end of the project, following topics are to be covered;
 
@@ -176,7 +176,7 @@ thousand                         Warning -> 'Invalid input: Phone number should 
 
 ---
 
-- You can get your subnets using the following command with AWS CLI:
+### You can get your existing subnets using the following command with AWS CLI:
 
 ```bash
 aws ec2 describe-subnets --no-paginate --filters "Name=default-for-az,Values=true" | egrep "(VpcId)|(SubnetId)"
