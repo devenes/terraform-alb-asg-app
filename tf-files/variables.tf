@@ -7,7 +7,7 @@ variable "github_token" {
 }
 
 variable "github_repository_name" {
-  default = "terraform-phonebook"
+  default = "terraform-alb-asg-app"
 }
 variable "github_repository_branch_name" {
   default = "master"
@@ -30,7 +30,7 @@ variable "profile" {
 #######################################
 
 variable "key_name" {
-  default = "east1"
+  default = "virginia"
 }
 
 variable "instance_type" {
