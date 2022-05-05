@@ -8,6 +8,8 @@ The Phonebook Application aims to create a phonebook application in Python and d
 
 ![Project](./readme/tf-phonebook.jpg)
 
+## Case Study Details
+
 - Your company has recently started a project that aims to serve as phonebook web application. You and your colleagues have started to work on the project. Your teammates have developed the UI part the project as shown in the template folder and develop the coding part and they need your help to deploying the app in development environment.
 
 - As a first step, you need to write program that creates a phonebook, adds requested contacts to the phonebook, finds and removes the contacts from the phonebook.
@@ -26,21 +28,19 @@ The Phonebook Application aims to create a phonebook application in Python and d
 
 - Example for user inputs and respective formats
 
-```text
-Input in username field          Format to convert
---------------                   -----------------
-''                               Warning -> 'Invalid input: Name can not be empty'
-callahan                         Callahan
-joHn doE                         John Doe
-62267                            Warning -> 'Invalid input: Name of person should be text'
+| Input in Username Field | Type     | Format to Convert                                         |
+| :---------------------- | :------- | :-------------------------------------------------------- |
+| ''                      | `string` | Warning -> 'Invalid input: Name can not be empty'         |
+| enes                    | `string` | Enes                                                      |
+| joHn doE                | `string` | John Doe                                                  |
+| 62267                   | `string` | Warning -> 'Invalid input: Name of person should be text' |
 
-Input in number field            Format to convert
---------------                   -----------------
-''                               Warning -> 'Invalid input: Phone number can not be empty'
-1234567890                       1234567890
-546347                           546347
-thousand                         Warning -> 'Invalid input: Phone number should be in numeric format'
-```
+| Input in Number Field | Type     | Format to Convert                                                    |
+| :-------------------- | :------- | :------------------------------------------------------------------- |
+| ''                    | `number` | Warning -> 'Invalid input: Phone number can not be empty'            |
+| 1234567890            | `number` | 1234567890                                                           |
+| 546347                | `number` | 546345                                                               |
+| ten thousand          | `number` | Warning -> 'Invalid input: Phone number should be in numeric format' |
 
 - As a second step, after you finish the coding, you are requested to deploy your web application using Python's Flask framework.
 
@@ -176,7 +176,7 @@ thousand                         Warning -> 'Invalid input: Phone number should 
 
 ---
 
-### You can get your existing subnets using the following command with AWS CLI:
+### Get your existing subnets using the following command with AWS CLI:
 
 ```bash
 aws ec2 describe-subnets --no-paginate --filters "Name=default-for-az,Values=true" | egrep "(VpcId)|(SubnetId)"
