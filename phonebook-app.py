@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # The hardest part of this project is to get endpoint of RDS instances. Since our RDS is created within cloudformation template, we need to get RDS endpoint and paste it here as environmental variable using Launch templates user data.
 db_endpoint = open(
-    "/home/ec2-user/terraform-phonebook/dbserver.endpoint", 'r', encoding='UTF-8')
+    "/home/ec2-user/terraform-alb-asg-app/dbserver.endpoint", 'r', encoding='UTF-8')
 
 # Configure mysql database
 
